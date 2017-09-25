@@ -26,7 +26,7 @@ class Router
 				if(method_exists($controller_obj, $routing[$route]['action'])){
 					$controller_obj->$routing[$route]['action']();
 				} else {
-					$_SESSION['error_router'] = 'No method' . $routing[$route]['action'];
+					$_SESSION['error_router'] = 'No method ' . $routing[$route]['action'];
 				}
 			} else {
 				$_SESSION['error_router'] = 'No classes ' . $controller;

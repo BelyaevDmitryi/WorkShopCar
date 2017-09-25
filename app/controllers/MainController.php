@@ -5,7 +5,6 @@ use models\Connection;
 
 class MainController
 {
-	public $_err;
 	public function index()
 	{
 		header("Location: ");

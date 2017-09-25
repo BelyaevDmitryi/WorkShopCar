@@ -8,24 +8,24 @@
     <meta name="author" content="Belyaev Dmitryi">
 
     <!-- jQuery -->
-    <script src='/js/jquery/jquery.min.js'></script>
+    <script src='/client/js/jquery/jquery.min.js'></script>
 
     <!-- The styles -->
-    <link id='bs-css' href='/css/bootstrap-cerulean.min.css' rel='stylesheet'>
+    <link id='bs-css' href='/client/css/bootstrap-cerulean.min.css' rel='stylesheet'>
 
-    <link href='/css/myapp.css' rel='stylesheet'>
-    <link href='/chosen/chosen.min.css' rel='stylesheet'>
-    <link href='/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
-    <link href='/responsive-tables/responsive-tables.css' rel='stylesheet'>
-    <link href='/css/jquery.noty.css' rel='stylesheet'>
-    <link href='/css/noty_theme_default.css' rel='stylesheet'>
-    <link href='/css/elfinder.min.css' rel='stylesheet'>
-    <link href='/css/elfinder.theme.css' rel='stylesheet'>
-    <link href='/css/jquery.iphone.toggle.css' rel='stylesheet'>
-    <link href='/css/uploadify.css' rel='stylesheet'>
-    <link href='/css/animate.min.css' rel='stylesheet'>
+    <link href='/client/css/myapp.css' rel='stylesheet'>
+    <link href='/client/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='/client/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='/client/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='/client/css/jquery.noty.css' rel='stylesheet'>
+    <link href='/client/css/noty_theme_default.css' rel='stylesheet'>
+    <link href='/client/css/elfinder.min.css' rel='stylesheet'>
+    <link href='/client/css/elfinder.theme.css' rel='stylesheet'>
+    <link href='/client/css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='/client/css/uploadify.css' rel='stylesheet'>
+    <link href='/client/css/animate.min.css' rel='stylesheet'>
 
     <!-- The fav icon -->
-    <link rel='shortcut icon' href='/img/favicon.ico'>
+    <link rel='shortcut icon' href='/client/img/favicon.ico'>
 
 </head>
