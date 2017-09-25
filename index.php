@@ -2,8 +2,6 @@
 use models\Connection;
 use models\Router;
 
-global $err;
-
 session_start();
 
 require '/app/models/Loader.php';
