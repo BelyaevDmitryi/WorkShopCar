@@ -2,6 +2,14 @@
 include "/app/views/header.php";
 ?>
 
+<head>
+    <style type="text/css">
+    tr.lastrow{
+        background: #3986AC;
+    }
+    </style>
+</head>
+
 <body>
     <!-- topbar starts -->
     <div class="navbar navbar-default" role="navigation">

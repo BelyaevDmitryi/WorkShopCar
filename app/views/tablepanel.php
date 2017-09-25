@@ -161,27 +161,38 @@
                                 unset($str);
                                 
                                 for($i = 0; $i < count($userLogin); $i++){
-                                    echo "<tr>";
-                                    echo "<td>$userLogin[$i]</td>";
-                                    echo "<td class='center'>$userPhoneZ[$i]</td>";
-                                    echo "<td class='center'>$nameZ[$i]</td>";
-                                    echo "<td class='center'>$descriptionZ[$i]</td>";
-                                    //$serv = $_SERVER['DOCUMENT_ROOT'];
-                                    //$serv = substr($serv, 0, -4);
-                                    //$photoPath[$i] = substr($photoPath[$i], 2, strlen($photoPath[$i]));
-                                    //echo $photoPath[$i];
-                                    //$photoPath[$i] = substr($photoPath[$i], 13, strlen($photoPath[$i]));
-                                    //echo $photoPath[$i];
-                                    echo "<td class='center'>";
-                                    if(file_exists($photoPath[$i])){
-                                        //echo "<img src=".$serv.$photoPath[$i]." alt=".$serv.$photoPath[$i]." />";
-                                        echo '<img src="' . $photoPath[$i] . '" width="300" class="scale-sharp" />';
+                                    if($i == count($userLogin)-1)
+                                    {
+                                        echo "<tr class='lastrow'>";
+                                        echo "<td>$userLogin[$i]</td>";
+                                        echo "<td class='center'>$userPhoneZ[$i]</td>";
+                                        echo "<td class='center'>$nameZ[$i]</td>";
+                                        echo "<td class='center'>$descriptionZ[$i]</td>";
+                                        echo "<td class='center'>";
+                                        if(file_exists($photoPath[$i])){
+                                            echo '<img src="' . $photoPath[$i] . '" width="300" class="scale-sharp" />';
+                                        } else {
+                                            echo "Изображение отсутствует";
+                                        }
+                                        echo "</td>";
+                                        echo "<td class='center'>$dateZ[$i]</td>";
+                                        echo "</tr>";
                                     } else {
-                                        echo "Изображение отсутствует";
+                                        echo "<tr>";
+                                        echo "<td>$userLogin[$i]</td>";
+                                        echo "<td class='center'>$userPhoneZ[$i]</td>";
+                                        echo "<td class='center'>$nameZ[$i]</td>";
+                                        echo "<td class='center'>$descriptionZ[$i]</td>";
+                                        echo "<td class='center'>";
+                                        if(file_exists($photoPath[$i])){
+                                            echo '<img src="' . $photoPath[$i] . '" width="300" class="scale-sharp" />';
+                                        } else {
+                                            echo "Изображение отсутствует";
+                                        }
+                                        echo "</td>";
+                                        echo "<td class='center'>$dateZ[$i]</td>";
+                                        echo "</tr>";
                                     }
-                                    echo "</td>";                                    
-                                    echo "<td class='center'>$dateZ[$i]</td>";
-                                    echo "</tr>";
                                 }
                             } else {
                                 $conn = new models\Connection();
@@ -340,21 +351,38 @@
                                 unset($str);
 
                                 for($i = 0; $i < count($userLogin); $i++){
-                                    echo "<tr>";
-                                    echo "<td>$userLogin[$i]</td>";
-                                    echo "<td class='center'>$userPhoneZ[$i]</td>";
-                                    echo "<td class='center'>$nameZ[$i]</td>";
-                                    echo "<td class='center'>$descriptionZ[$i]</td>";
-                                    echo "<td class='center'>";
-                                    if(file_exists($photoPath[$i])){
-                                        //echo "<img src=".$serv.$photoPath[$i]." alt=".$serv.$photoPath[$i]." />";
-                                        echo '<img src="' . $photoPath[$i] . '" width="300" class="scale-sharp" />';
+                                    if($i == count($userLogin)-1)
+                                    {
+                                        echo "<tr class='lastrow'>";
+                                        echo "<td>$userLogin[$i]</td>";
+                                        echo "<td class='center'>$userPhoneZ[$i]</td>";
+                                        echo "<td class='center'>$nameZ[$i]</td>";
+                                        echo "<td class='center'>$descriptionZ[$i]</td>";
+                                        echo "<td class='center'>";
+                                        if(file_exists($photoPath[$i])){
+                                            echo '<img src="' . $photoPath[$i] . '" width="300" class="scale-sharp" />';
+                                        } else {
+                                            echo "Изображение отсутствует";
+                                        }
+                                        echo "</td>";
+                                        echo "<td class='center'>$dateZ[$i]</td>";
+                                        echo "</tr>";
                                     } else {
-                                        echo "Изображение отсутствует";
+                                        echo "<tr>";
+                                        echo "<td>$userLogin[$i]</td>";
+                                        echo "<td class='center'>$userPhoneZ[$i]</td>";
+                                        echo "<td class='center'>$nameZ[$i]</td>";
+                                        echo "<td class='center'>$descriptionZ[$i]</td>";
+                                        echo "<td class='center'>";
+                                        if(file_exists($photoPath[$i])){
+                                            echo '<img src="' . $photoPath[$i] . '" width="300" class="scale-sharp" />';
+                                        } else {
+                                            echo "Изображение отсутствует";
+                                        }
+                                        echo "</td>";
+                                        echo "<td class='center'>$dateZ[$i]</td>";
+                                        echo "</tr>";
                                     }
-                                    echo "</td>";                                    
-                                    echo "<td class='center'>$dateZ[$i]</td>";
-                                    echo "</tr>";
                                 }
                             }
                         }
