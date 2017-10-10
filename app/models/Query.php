@@ -29,7 +29,7 @@ class Query{
 	function selectDataWithParametrs($params){
 		$sql_query = "select * from $this->_tableName where ";
 		foreach ($params as $key => $values) {
-			$sql_query.= "$key = '$values' AND ";
+			$sql_query.= "$key = $values AND ";
 		}
 		return $sql_query = substr($sql_query,0,-4);
 	}
@@ -40,7 +40,7 @@ class Query{
 			$sql_query = substr($sql_query,0,-6);
 		} else {
 			foreach ($params as $key => $values) {
-				$sql_query.= "$key = '$values' AND ";
+				$sql_query.= "$key = $values AND ";
 			}
 			$sql_query = substr($sql_query,0,-4);
 		}
@@ -57,7 +57,7 @@ class Query{
 			$sql_query = substr($sql_query,0,-1);
 			$sql_query = $sql_query .") values (";
 			foreach ($params as $key => $values) {
-				$sql_query.="'$values',";
+				$sql_query.="$values,";
 			}
 			$sql_query = substr($sql_query,0,-1);
 			$sql_query = $sql_query .")";
@@ -72,7 +72,7 @@ class Query{
 	function updateDataWithParametrs($params){
 		$sql_query = "update $this->_tableName set ";
 		foreach ($params as $key => $values) {
-			$sql_query.= "$key = '$values',";
+			$sql_query.= "$key = $values,";
 		}
 		$sql_query = substr($sql_query,0,-1);
 		$sql_query = $sql_query." where ";

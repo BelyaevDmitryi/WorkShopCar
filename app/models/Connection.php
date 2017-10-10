@@ -44,15 +44,34 @@ class Connection{
                 else
                     return $result = $this->_conn->query($sql_query);
             } catch (\PDOException $e) {
-               die('Ошибки при выполнении запроса: ' . $e->getMessage());
+               die('QueryRunning: ' . $e->getMessage());
             }
     		
     	}   	    	
     }
 
-    function prepare($sql_query){
+    function quote($string){
         if(!is_null($this->_conn)){
-            return $this->_conn->prepare($sql_query);
+            try{
+                return $result = $this->_conn->quote($string);
+            } catch (\PDOException $e) {
+                die('Quote: ' . $e->getMessage());
+            }
+        }    
+    }
+
+    function prepare($sql, $args){
+        if(!is_null($this->_conn)){
+            try{
+                $statement = $this->_conn->prepare($sql);
+                if(count($args)<1){
+                    return $statement->execute();
+                } else{
+                    return $statement->execute($args);
+                }
+            } catch (\PDOException $e) {
+                die('Prepare: ' . $e->getMessage());
+            }
         }        
     }
 

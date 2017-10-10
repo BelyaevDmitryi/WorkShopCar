@@ -10,6 +10,7 @@ class Router
 			"/" => ['controller' => 'Main', 'action' => 'index'],
 			"/login" => ['controller' => 'Main', 'action' => 'login'],
 			"/registration" => ['controller' => 'Main', 'action' => 'registration'],
+			"/reg" => ['controller' => 'Main', 'action' => 'reg'],
 			"/pages" => ['controller' => 'Main', 'action' => 'pages'],
 			"/logout" => ['controller' => 'Main', 'action' => 'logout'],
 			"/zayavka" => ['controller' => 'Main', 'action' => 'zayavka'],

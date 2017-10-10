@@ -19,7 +19,7 @@
 
                         $tableUser = new models\Query("user");
                         $params = array();
-                        $params['login'] = $_SESSION['login'];
+                        $params['login'] = $conn->quote($_SESSION['login']);
                         $sql_query = $tableUser->selectColumnWithParametrs("phone",$params);
                         $userPhone = $conn->exec($sql_query,true);
                         echo $userPhone[0]['phone'];

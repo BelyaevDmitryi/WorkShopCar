@@ -18,7 +18,7 @@ if(isset($_SESSION['login'])){
 		$userPhone = array();
 		for($i = 0; $i < count($userLogin); $i++){
 			$tmp = array();
-			$tmp['login'] = $userLogin[$i];
+			$tmp['login'] = $conn->quote($userLogin[$i]);
 			$sql_query = $tableUser->selectColumnWithParametrs("phone",$tmp);
 			$tmpPhone = $conn->exec($sql_query, true);
 

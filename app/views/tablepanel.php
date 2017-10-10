@@ -48,7 +48,7 @@
                                 $userPhone = array();
                                 for($i = 0; $i < count($userLogin); $i++){
                                     $tmp = array();
-                                    $tmp['login'] = $userLogin[$i];
+                                    $tmp['login'] = $conn->quote($userLogin[$i]);
                                     $sql_query = $tableUser->selectColumnWithParametrs("phone",$tmp);
                                     $tmpPhone = $conn->exec($sql_query, true);
 
@@ -202,7 +202,7 @@
                                 $tableUser = new models\Query("user");
 
                                 $tmp = array();
-                                $tmp['login'] = $_SESSION['login'];
+                                $tmp['login'] = $conn->quote($_SESSION['login']);
 
                                 $sql_query = $tableContract->selectColumnWithParametrs("login", $tmp);
                                 $userLogin = $conn->exec($sql_query, true);
@@ -216,7 +216,7 @@
                                 $userPhone = array();
                                 for($i = 0; $i < count($userLogin); $i++){
                                     $tmp = array();
-                                    $tmp['login'] = $userLogin[$i];
+                                    $tmp['login'] = $conn->quote($userLogin[$i]);
                                     $sql_query = $tableUser->selectColumnWithParametrs("phone",$tmp);
                                     $tmpPhone = $conn->exec($sql_query, true);
 
@@ -230,7 +230,7 @@
 
                                 //телефон при подаче заявки
                                 $tmp = array();
-                                $tmp['login'] = $_SESSION['login'];
+                                $tmp['login'] = $conn->quote($_SESSION['login']);
 
                                 $userPhoneZ = array();
                                 $sql_query = $tableContract->selectColumnWithParametrs("phone", $tmp);
@@ -242,7 +242,7 @@
 
                                 //название заявки
                                 $tmp = array();
-                                $tmp['login'] = $_SESSION['login'];
+                                $tmp['login'] = $conn->quote($_SESSION['login']);
 
                                 $nameZ = array();
                                 $sql_query = $tableContract->selectColumnWithParametrs("name", $tmp);
@@ -255,7 +255,7 @@
 
                                 //описание заявки
                                 $tmp = array();
-                                $tmp['login'] = $_SESSION['login'];
+                                $tmp['login'] = $conn->quote($_SESSION['login']);
 
                                 $descriptionZ = array();
                                 $sql_query = $tableContract->selectColumnWithParametrs("description", $tmp);
@@ -268,7 +268,7 @@
 
                                 //фотография проблемы
                                 $tmp = array();
-                                $tmp['login'] = $_SESSION['login'];
+                                $tmp['login'] = $conn->quote($_SESSION['login']);
 
                                 $photoName = array();
                                 $sql_query = $tableContract->selectColumnWithParametrs("image_id", $tmp);
@@ -319,7 +319,7 @@
 
                                 //дата подачи заявки
                                 $tmp = array();
-                                $tmp['login'] = $_SESSION['login'];
+                                $tmp['login'] = $conn->quote($_SESSION['login']);
 
                                 $dateZ = array();
                                 $sql_query = $tableContract->selectColumnWithParametrs("date_create", $tmp);
